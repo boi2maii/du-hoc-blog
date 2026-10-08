@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
-export async function GET(request) {
+export async function GET(request: NextRequest) {
     const { searchParams } = new URL(request.url);
     const code = searchParams.get('code');
     const provider = searchParams.get('provider') || 'github';
@@ -33,7 +33,6 @@ export async function GET(request) {
             return NextResponse.json({ error: 'Failed to obtain access token from GitHub' }, { status: 400 });
         }
 
-        // Gửi token ngược lại cho Decap CMS qua script window.opener
         const script = `
       <script>
         (function() {
@@ -53,7 +52,7 @@ export async function GET(request) {
         return new Response(script, {
             headers: { 'Content-Type': 'text/html' },
         });
-    } catch (error) {
+    } catch (error: any) {
         return NextResponse.json({ error: error.message }, { status: 500 });
     }
 }
