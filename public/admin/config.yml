@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: boi2maii/du-hoc-blog
   branch: main
 
 # local_backend: true
