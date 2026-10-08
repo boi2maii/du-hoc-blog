@@ -2,6 +2,7 @@ backend:
   name: github
   repo: boi2maii/du-hoc-blog
   branch: main
+  base_url: https://api.decapcms.org
 
 # local_backend: true
 
