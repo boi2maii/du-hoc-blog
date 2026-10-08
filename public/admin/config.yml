@@ -2,8 +2,8 @@ backend:
   name: github
   repo: boi2maii/du-hoc-blog
   branch: main
-  base_url: https://api.decapcms.org
-
+  base_url: https://du-hoc-blog.vercel.app
+  
 # local_backend: true
 
 # publish_mode: editorial_workflow
