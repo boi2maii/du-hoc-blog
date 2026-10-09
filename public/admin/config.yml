@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: boi2maii/du-hoc-blog
+  name: git-gateway
   branch: main
-  base_url: https://du-hoc-blog.vercel.app
   
 # local_backend: true
 
